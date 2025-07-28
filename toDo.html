@@ -1,0 +1,26 @@
+<input type="text" id = "text">
+<button onclick = "update()">add</button>
+
+<ul id = "list_container">
+    
+</ul>
+
+<script>
+    const text_val = document.getElementById("text");
+    const ul = document.getElementById("list_container");
+
+    function update(){
+        const inner_list = document.createElement("li");
+        const textContent = text_val.value.trim();
+        if(textContent == ""){
+            alert("Enter the input")
+        }else{
+            inner_list.innerHTML = textContent + "<button onclick='removeElement(event)'>delete</button>";
+            ul.append(inner_list);
+        }
+    }
+
+    function removeElement(event){
+        event.target.parentElement.remove();
+    }
+</script>
