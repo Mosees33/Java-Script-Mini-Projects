@@ -1,0 +1,56 @@
+<style>
+    form{
+        background-color: powderblue;
+    }
+    label{
+        font-size: large;
+        color: brown;
+    }
+    button{
+        margin-left: 20%;
+        background-color: beige;
+        color: black;
+    }
+</style>
+<form>
+    <label for="name">Name : </label>
+    <input type="text" id="name" required><br><br>
+
+    <label for="age">Age : </label>
+    <input type="number" id="age" required min="18" max="80"><br><br>
+
+    <label for="num">Mobile : </label>
+    <input type="text" id="num" required pattern="[0-9]{10}" title="Enter the 10 digit mobile number"><br><br>
+
+    <label for="email"> Email : </label>
+    <input type="email" required id="email"><br><br>
+
+    <label>
+        Gender : 
+        <input type="radio" name="gender" required> Male
+        <input type="radio" name="gender"> Female
+    </label><br><br>
+
+    <label title = "you have to select all the levels you did">
+        Education Level : 
+        <input type="checkbox" name="check" required> SSLC
+        <input type="checkbox" name="check"> HSC
+        <input type="checkbox" name="check"> Diploma
+        <input type="checkbox" name="check"> UG
+        <input type="checkbox" name="check"> PG
+    </label><br><br>
+
+    <label for="Course">Courses : </label>
+    <select id="Course" name="Course" required>
+        <option value="">--Select--</option>
+        <option value="Front end">Front End</option>
+        <option value="Back end">Back End</option>
+        <option value="full stack">Full Stack</option>
+        <option value="AI&ML">AI&ML</option>
+    </select><br><br>
+
+    <label for="feed">Feed Back : </label>
+    <textarea name="feed" id="feed" required title="30 characters minimum" minlength="30"></textarea><br><br>
+
+    <button>submit</button>
+</form>
